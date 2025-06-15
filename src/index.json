@@ -34,13 +34,13 @@
           "id": "minFontSize",
           "label": "Min Font Size",
           "type": "FONT_SIZE",
-          "defaultValue": 12
+          "defaultValue": "12"
         },
         {
           "id": "maxFontSize",
           "label": "Max Font Size",
           "type": "FONT_SIZE",
-          "defaultValue": 48
+          "defaultValue": "48"
         },
         {
           "id": "textColor",
@@ -60,7 +60,7 @@
           "id": "enableWeightColors",
           "label": "Enable weight-based coloring",
           "type": "CHECKBOX",
-          "defaultValue": false
+          "defaultValue": "0"
         },
         {
           "id": "lowWeightColor",
@@ -114,8 +114,5 @@
         "FILTER"
       ]
     }
-  ],
-  "features": {
-    "enableComparisonDateRange": false
-  }
+  ]
 }

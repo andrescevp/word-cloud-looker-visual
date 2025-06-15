@@ -11,7 +11,7 @@
   "devMode": "true",
   "components": [
     {
-      "name": "myViz",
+      "name": "IngenieorsGPTWordCloud",
       "description": "My first Community Visualization",
       "iconUrl": "https://url",
       "resource": {

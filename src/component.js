@@ -48,30 +48,30 @@ export const render = (rawData, processedData, options = {})  =>{
   
   // Extract style options
   const styleOpts = rawData.style || {};
-  const minFont = styleOpts.minFontSize.value || styleOpts.minFontSize.defaultValue || 12;
-  const maxFont = styleOpts.maxFontSize.value || styleOpts.maxFontSize.defaultValue || 48;
-  const defaultColorObj = styleOpts.textColor.value || styleOpts.textColor.defaultValue || { color: '#1d1d1b' };
+  const minFont = styleOpts.minFontSize ? (styleOpts.minFontSize.value || styleOpts.minFontSize.defaultValue) : 12;
+  const maxFont = styleOpts.maxFontSize ? (styleOpts.maxFontSize.value || styleOpts.maxFontSize.defaultValue) : 48;
+  const defaultColorObj = styleOpts.textColor ? (styleOpts.textColor.value || styleOpts.textColor.defaultValue) : { color: '#1d1d1b' };
   const defaultColor = defaultColorObj.color;
   
   // Extract weight-based color options
-  const enableWeightColors = styleOpts.enableWeightColors.value || styleOpts.enableWeightColors.defaultValue || false;
+  const enableWeightColors = styleOpts.enableWeightColors ? (styleOpts.enableWeightColors.value || styleOpts.enableWeightColors.defaultValue) : true;
 
   // Create an array of color thresholds if weight coloring is enabled
   const colorThresholds = [];
   if (enableWeightColors) {
     // Low weight color and threshold
-    const lowColorObj = styleOpts.lowWeightColor.value || styleOpts.lowWeightColor.defaultValue || { color: '#1d1d1b' };
-    const lowThreshold = parseFloat(styleOpts.lowWeightThreshold.value || styleOpts.lowWeightThreshold.defaultValue || '0');
+    const lowColorObj = styleOpts.lowWeightColor ? (styleOpts.lowWeightColor.value || styleOpts.lowWeightColor.defaultValue) : { color: '#1d1d1b' };
+    const lowThreshold = parseFloat(styleOpts.lowWeightThreshold ? (styleOpts.lowWeightThreshold.value || styleOpts.lowWeightThreshold.defaultValue) : '0');
     colorThresholds.push({ threshold: lowThreshold, color: lowColorObj.color });
     
     // Medium weight color and threshold
-    const midColorObj = styleOpts.midWeightColor.value || styleOpts.midWeightColor.defaultValue || { color: '#5a33ee' };
-    const midThreshold = parseFloat(styleOpts.midWeightThreshold.value || styleOpts.midWeightThreshold.defaultValue || '10');
+    const midColorObj = styleOpts.midWeightColor ? (styleOpts.midWeightColor.value || styleOpts.midWeightColor.defaultValue) : { color: '#5a33ee' };
+    const midThreshold = parseFloat(styleOpts.midWeightThreshold ? (styleOpts.midWeightThreshold.value || styleOpts.midWeightThreshold.defaultValue) : '10');
     colorThresholds.push({ threshold: midThreshold, color: midColorObj.color });
     
     // High weight color and threshold
-    const highColorObj = styleOpts.highWeightColor.value || styleOpts.highWeightColor.defaultValue || { color: '#fd5304' };
-    const highThreshold = parseFloat(styleOpts.highWeightThreshold.value || styleOpts.highWeightThreshold.defaultValue || '20');
+    const highColorObj = styleOpts.highWeightColor ? (styleOpts.highWeightColor.value || styleOpts.highWeightColor.defaultValue) : { color: '#fd5304' };
+    const highThreshold = parseFloat(styleOpts.highWeightThreshold ? (styleOpts.highWeightThreshold.value || styleOpts.highWeightThreshold.defaultValue) : '20');
     colorThresholds.push({ threshold: highThreshold, color: highColorObj.color });
     
     // Sort thresholds in ascending order
