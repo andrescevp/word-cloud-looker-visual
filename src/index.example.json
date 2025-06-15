@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "DAFO Matrix Data",
+      "elements": [
+        {
+          "id": "dafo_property_description",
+          "label": "DAFO Description",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "dafo_property",
+          "label": "DAFO Property",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "metricID",
+          "label": "Value (optional)",
+          "type": "METRIC",
+          "options": {
+            "min": 0,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "appearance",
+      "label": "Matrix Appearance",
+      "elements": [
+        {
+          "id": "matrixTitle",
+          "label": "Matrix Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "DAFO Analysis"
+        },
+        {
+          "id": "strengthsTitle",
+          "label": "Strengths Quadrant Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "Fortalezas"
+        },
+        {
+          "id": "weaknessesTitle",
+          "label": "Weaknesses Quadrant Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "Debilidades"
+        },
+        {
+          "id": "opportunitiesTitle",
+          "label": "Opportunities Quadrant Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "Oportunidades"
+        },
+        {
+          "id": "threatsTitle",
+          "label": "Threats Quadrant Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "Amenazas"
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "label": "Colors",
+      "elements": [
+        {
+          "id": "strengthColor",
+          "label": "Strengths Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#c0f03e"
+          }
+        },
+        {
+          "id": "weaknessColor",
+          "label": "Weaknesses Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#fd5304"
+          }
+        },
+        {
+          "id": "opportunityColor",
+          "label": "Opportunities Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#5a33ee"
+          }
+        },
+        {
+          "id": "threatColor",
+          "label": "Threats Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#1d1d1b"
+          }
+        }
+      ]
+    }
+  ]
+}

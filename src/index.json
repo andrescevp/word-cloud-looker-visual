@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": "words",
+      "label": "Words",
+      "elements": [
+        {
+          "id": "text",
+          "label": "Word",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "weight",
+          "label": "Weight (optional)",
+          "type": "METRIC",
+          "options": {
+            "min": 0,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "text",
+      "label": "Text Appearance",
+      "elements": [
+        {
+          "id": "minFontSize",
+          "label": "Min Font Size",
+          "type": "FONT_SIZE",
+          "defaultValue": 12
+        },
+        {
+          "id": "maxFontSize",
+          "label": "Max Font Size",
+          "type": "FONT_SIZE",
+          "defaultValue": 48
+        },
+        {
+          "id": "textColor",
+          "label": "Text Color",
+          "type": "FONT_COLOR",
+          "defaultValue": {
+            "color": "#1d1d1b"
+          }
+        }
+      ]
+    },
+    {
+      "id": "weightColors",
+      "label": "Weight-Based Colors",
+      "elements": [
+        {
+          "id": "enableWeightColors",
+          "label": "Enable weight-based coloring",
+          "type": "CHECKBOX",
+          "defaultValue": false
+        },
+        {
+          "id": "lowWeightColor",
+          "label": "Low Weight Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#1d1d1b"
+          }
+        },
+        {
+          "id": "lowWeightThreshold",
+          "label": "Low Weight Threshold",
+          "type": "TEXTINPUT",
+          "defaultValue": "0"
+        },
+        {
+          "id": "midWeightColor",
+          "label": "Medium Weight Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#5a33ee"
+          }
+        },
+        {
+          "id": "midWeightThreshold",
+          "label": "Medium Weight Threshold",
+          "type": "TEXTINPUT",
+          "defaultValue": "10"
+        },
+        {
+          "id": "highWeightColor",
+          "label": "High Weight Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#fd5304"
+          }
+        },
+        {
+          "id": "highWeightThreshold",
+          "label": "High Weight Threshold",
+          "type": "TEXTINPUT",
+          "defaultValue": "20"
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "id": "interaction",
+      "supportedActions": [
+        "FILTER"
+      ]
+    }
+  ],
+  "features": {
+    "enableComparisonDateRange": false
+  }
+}
